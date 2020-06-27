@@ -1,6 +1,5 @@
 import Head from 'next/head'
 //import Cube from '../components/cube'
-import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
 const DynamicComponent = dynamic(() => import('../components/cube.jsx'), { ssr: false })

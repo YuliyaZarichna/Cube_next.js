@@ -8,11 +8,13 @@ import { withRouter } from 'next/router'
 
 extend({ OrbitControls });
 
-import AboutImg from '../assets/images/about.png'
-import Man from '../assets/images/man_2.png'
-import Omo from '../assets/images/omo.png'
+import AboutImg from '../assets/images/about2.png'
+import Education from '../assets/images/education.png'
+import Skills from '../assets/images/skills.png'
 import Project from '../assets/images/projects.png'
-import Tex from '../assets/images/texture.jpg'
+import Experience from '../assets/images/experience.png'
+import Hobbies from '../assets/images/hobbies.png'
+
 
 const style = {
     height: 400 // we can control scene size by setting container dimensions
@@ -45,7 +47,7 @@ class Cube extends Component {
         const height = this.el.clientHeight;
 
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color('white');
+        // this.scene.background = new THREE.Color('white');
 
         this.raycaster = new THREE.Raycaster();
         this.mouse = new THREE.Vector2();
@@ -78,21 +80,21 @@ class Cube extends Component {
              }); */
 
 
-        /*  console.log("about contact", AboutImg)
-         console.log("skills", Omo)
-         console.log("projects", Project)
-         console.log("experience, work", Man)
-         console.log("education", Tex)
-         console.log("fun")
-  */
+        /*   console.log("about contact", AboutImg)
+          console.log("skills", Skills)
+          console.log("projects", Project)
+          console.log("experience, work", Experience)
+          console.log("education", Education)
+          console.log("fun", Hobbies) */
+
         let loader = new THREE.TextureLoader();
         let material = [
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/about-615b94756333a12547e820fb105292ce.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/omo-a891e0dc03d7e499cd81011010673794.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/projects-0f116e229b413b349240cfd1a71bd261.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/man_2-e333a72e9d8795c1c8e20c2c72e0dc2c.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/texture-9164aeea03a774781657daae3e8adc7a.jpg') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/texture-9164aeea03a774781657daae3e8adc7a.jpg') }),
+            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/about2-3ed6196341cbd53807fe33c42d956ed0.png') }),
+            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/skills-2350d7d33df44634aef3de7f379d7b00.png') }),
+            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/projects-1e930e92b38ec8759ae45d949e61f439.png') }),
+            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/experience-807705f405c56896d90f7a9ac98873bf.png') }),
+            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/education-8ebd3812a981578c495b20dc4f46f04d.png') }),
+            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/hobbies-b5ec7986c59a6d93d45654164765bfdb.png') }),
         ];
 
         this.cube = new THREE.Mesh(geometry, material);
