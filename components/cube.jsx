@@ -8,12 +8,12 @@ import { withRouter } from 'next/router'
 
 extend({ OrbitControls });
 
-import AboutImg from '../assets/images/about2.png'
+/* import AboutImg from '../assets/images/about2.png'
 import Education from '../assets/images/education.png'
 import Skills from '../assets/images/skills.png'
 import Project from '../assets/images/projects.png'
 import Experience from '../assets/images/experience.png'
-import Hobbies from '../assets/images/hobbies.png'
+import Hobbies from '../assets/images/hobbies.png' */
 
 
 const style = {
