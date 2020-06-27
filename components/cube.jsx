@@ -129,15 +129,14 @@ class Cube extends Component {
         this.camera.updateProjectionMatrix();
     };
 
-    onMouseDown = () => {
+    onMouseDownHanler = () => {
         this.start = new Date();
     }
 
-    onMouseUp = () => {
-        var end;
+    onMouseUpHanler = () => {
+        var end = new Date();
         var delta;
         var clickDuration = 0.2;
-        end = new Date();
         delta = (end - this.start) / 1000.0;
         console.log("delta", delta);
         if (delta < clickDuration) {
@@ -148,7 +147,7 @@ class Cube extends Component {
         }
     }
 
-    onMouseMove = (event) => {
+    onMouseMoveHanler = (event) => {
         const width = this.el.clientWidth;
         const height = this.el.clientHeight;
         this.raycaster.setFromCamera(this.mouse, this.camera);
@@ -203,15 +202,47 @@ class Cube extends Component {
         }
     }
 
+    onTouchStartHanler = () => {
+        this.start = new Date();
+    }
+
+    onTouchEndHanler = (event) => {
+        console.log("onDocumentTouchEnd")
+        const width = this.el.clientWidth;
+        const height = this.el.clientHeight;
+        var end = new Date();
+        var delta;
+        var clickDuration = 0.2;
+        delta = (end - this.start) / 1000.0;
+
+        if (event.changedTouches[0].clientX >= this.marginLeft &&
+            event.changedTouches[0].clientX <= width + this.marginLeft &&
+            event.changedTouches[0].clientY >= this.marginTop &&
+            event.changedTouches[0].clientY <= height + this.marginTop) {
+
+            this.mouse.x = ((event.changedTouches[0].clientX - this.marginLeft) / width) * 2 - 1;
+            this.mouse.y = -((event.changedTouches[0].clientY - this.marginTop) / height) * 2 + 1;
+
+            if (delta < clickDuration) {
+                this.onClick();
+            }
+        } else {
+            this.mouse.x = 1;
+            this.mouse.y = 1;
+        }
+    }
+
     render() {
         return (
             <>
                 <div
                     className={classes.Cube}
                     ref={ref => (this.el = ref)}
-                    onMouseDown={this.onMouseDown}
-                    onMouseUp={this.onMouseUp}
-                    onMouseMove={this.onMouseMove}
+                    onMouseDown={this.onMouseDownHanler}
+                    onMouseUp={this.onMouseUpHanler}
+                    onMouseMove={this.onMouseMoveHanler}
+                    onTouchStart={this.onTouchStartHanler}
+                    onTouchEnd={this.onTouchEndHanler}
                 />
             </>
         )
