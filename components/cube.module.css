@@ -1,0 +1,13 @@
+#container {
+    width: 400px;
+    height: 400px;
+}
+
+
+.Cube {
+    margin-top: 100px;
+    height: 800px;
+    width: 800px;
+    margin: 0 auto;
+    outline: none;
+}
