@@ -8,12 +8,12 @@ import { withRouter } from 'next/router'
 
 extend({ OrbitControls });
 
-/* import AboutImg from '../assets/images/about2.png'
+import AboutImg from '../assets/images/about2.png'
 import Education from '../assets/images/education.png'
 import Skills from '../assets/images/skills.png'
 import Project from '../assets/images/projects.png'
 import Experience from '../assets/images/experience.png'
-import Hobbies from '../assets/images/hobbies.png' */
+import Hobbies from '../assets/images/hobbies.png'
 
 
 const style = {
@@ -80,21 +80,21 @@ class Cube extends Component {
              }); */
 
 
-        /*   console.log("about contact", AboutImg)
-          console.log("skills", Skills)
-          console.log("projects", Project)
-          console.log("experience, work", Experience)
-          console.log("education", Education)
-          console.log("fun", Hobbies) */
+        console.log("about contact", AboutImg)
+        console.log("skills", Skills)
+        console.log("projects", Project)
+        console.log("experience, work", Experience)
+        console.log("education", Education)
+        console.log("fun", Hobbies)
 
         let loader = new THREE.TextureLoader();
         let material = [
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/about2-3ed6196341cbd53807fe33c42d956ed0.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/skills-2350d7d33df44634aef3de7f379d7b00.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/projects-1e930e92b38ec8759ae45d949e61f439.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/experience-807705f405c56896d90f7a9ac98873bf.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/education-8ebd3812a981578c495b20dc4f46f04d.png') }),
-            new THREE.MeshBasicMaterial({ map: loader.load('/_next/static/images/hobbies-b5ec7986c59a6d93d45654164765bfdb.png') }),
+            new THREE.MeshBasicMaterial({ map: loader.load(AboutImg) }),
+            new THREE.MeshBasicMaterial({ map: loader.load(Skills) }),
+            new THREE.MeshBasicMaterial({ map: loader.load(Project) }),
+            new THREE.MeshBasicMaterial({ map: loader.load(Experience) }),
+            new THREE.MeshBasicMaterial({ map: loader.load(Education) }),
+            new THREE.MeshBasicMaterial({ map: loader.load(Hobbies) }),
         ];
 
         this.cube = new THREE.Mesh(geometry, material);
