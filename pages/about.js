@@ -1,11 +1,4 @@
-import React from 'react'
-import * as THREE from 'three';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-const about = () => (
-    <div>
-        About
-    </div>
-)
+import Layout from "../components/Layout/Layout";
+const about = (props) => <Layout>{`About`}</Layout>;
 
 export default about;
