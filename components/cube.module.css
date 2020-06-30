@@ -1,7 +1,7 @@
 .Cube {
   display: flex;
-  height: 500px;
-  width: 500px;
+  /* height: 500px; */
+  width: 45%;
   justify-content: center;
   outline: none;
 }
@@ -15,8 +15,8 @@
 }
 .Cube canvas {
   align-self: center;
+  /* height: 50%; */
   /*   align-self: center;
   width: 50vw;
-  height: 50vh;
   background: red; */
 }

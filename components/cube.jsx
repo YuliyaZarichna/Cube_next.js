@@ -3,7 +3,6 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { extend } from "react-three-fiber";
 import classes from "./cube.module.css";
-import Link from "next/link";
 import { withRouter } from "next/router";
 
 extend({ OrbitControls });
@@ -14,10 +13,6 @@ import Skills from "../assets/images/skills.png";
 import Project from "../assets/images/projects.png";
 import Experience from "../assets/images/experience.png";
 import Hobbies from "../assets/images/hobbies.png";
-
-const style = {
-  height: 400, // we can control scene size by setting container dimensions
-};
 
 class Cube extends Component {
   constructor(props) {
@@ -58,7 +53,7 @@ class Cube extends Component {
     this.marginLeft = this.el.getBoundingClientRect().left;
 
     // set some distance from a cube that is located at z = 0
-    this.camera.position.z = 6;
+    this.camera.position.z = 8;
 
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setSize(width, height);
@@ -186,12 +181,16 @@ class Cube extends Component {
       this.props.router.push("/skills");
     } else if (faceIdx1 > 3 && faceIdx1 <= 5) {
       console.log("projects");
+      this.props.router.push("/projects");
     } else if (faceIdx1 > 5 && faceIdx1 <= 7) {
       console.log("work exp");
+      this.props.router.push("/experience");
     } else if (faceIdx1 > 7 && faceIdx1 <= 9) {
       console.log("education");
+      this.props.router.push("/education");
     } else if (faceIdx1 > 9 && faceIdx1 <= 11) {
       console.log("hobbie");
+      this.props.router.push("/hobbies");
     }
   };
 
