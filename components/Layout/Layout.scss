@@ -1,24 +1,35 @@
 @import "../../theme/theme";
 
 .Layout {
-  flex: 1;
+  /*   flex: 1;
+ */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   height: 100%;
   width: 100%;
   background: #1d1d1d;
 
   .Content {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 
-    width: 60%;
+    width: 100%;
+    height: 100%;
 
     color: $on-secondary;
+    > div:first-child {
+      /*  width: 60%;
+      background-color: white; */
+    }
+    > div:last-child {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      height: 100%;
+    }
 
     h1 {
       font-size: 60px;

@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 const about = (props) => (
-  <Layout>
+  <div style={{ backgroundColor: "blue" }}>
     <h1>{`About me`}</h1>
     <p>
       I recently accomplished a bachelor’s degree in “International Media and
@@ -19,7 +19,7 @@ const about = (props) => (
         text-shadow: 2px 0px 15px rgba(59, 184, 189, 0.65);
       }
     `}</style>
-  </Layout>
+  </div>
 );
 
 export default about;

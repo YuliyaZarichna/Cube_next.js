@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 const skills = (props) => (
-  <Layout>
+  <div>
     <h1> {`Skills`}</h1>
 
     <h3>Technical skiils</h3>
@@ -25,7 +25,7 @@ const skills = (props) => (
         text-shadow: 2px 0px 15px rgba(150, 72, 139, 0.65);
       }
     `}</style>
-  </Layout>
+  </div>
 );
 
 export default skills;

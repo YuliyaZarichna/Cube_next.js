@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 const project = (props) => (
-  <Layout>
+  <div>
     <h1>{`Project`}</h1>
     <style jsx>{`
       h1 {
@@ -8,7 +8,7 @@ const project = (props) => (
         text-shadow: 2px 0px 15px rgba(69, 123, 245, 0.65);
       }
     `}</style>
-  </Layout>
+  </div>
 );
 
 export default project;

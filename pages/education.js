@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 const education = (props) => (
-  <Layout>
+  <div>
     <h1>{`Education`}</h1>
     <h3>
       Bacherlor of Science: <br />
@@ -21,7 +21,7 @@ const education = (props) => (
         text-shadow: 2px 0px 15px rgba(0, 91, 24, 0.65);
       }
     `}</style>
-  </Layout>
+  </div>
 );
 
 export default education;
