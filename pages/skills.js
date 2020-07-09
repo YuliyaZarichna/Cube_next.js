@@ -20,9 +20,19 @@ const skills = (props) => (
     <h5>English, German, Ukrainian, Russian</h5>
 
     <style jsx>{`
-      h1 {
+      /*    h1 {
         color: #96488b;
         text-shadow: 2px 0px 15px rgba(150, 72, 139, 0.65);
+      } */
+      div::before {
+        margin-top: -40px;
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        -webkit-box-shadow: 0px 0px 15px 4px rgba(150, 72, 139, 1);
+        -moz-box-shadow: 0px 0px 15px 4px rgba(150, 72, 139, 1);
+        box-shadow: 0px 0px 15px 4px rgba(150, 72, 139, 1);
       }
     `}</style>
   </div>

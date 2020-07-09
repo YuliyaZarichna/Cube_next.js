@@ -20,6 +20,14 @@ export default function MyApp({ Component, pageProps }) {
       <div className="rightContent">
         <DynamicComponent />
       </div>
+      <style jsx global>{`
+        .leftContent::before {
+          filter: hue-rotate(90deg) brightness(20%) grayscale(20%);
+          box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+            -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+        }
+      `}</style>
+      ;
     </Layout>
   );
 }
