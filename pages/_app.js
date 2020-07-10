@@ -27,7 +27,6 @@ export default function MyApp({ Component, pageProps }) {
             -12px 0 8px -4px rgba(31, 73, 125, 0.8);
         }
       `}</style>
-      ;
     </Layout>
   );
 }

@@ -4,19 +4,21 @@ const education = (props) => {
   return (
     <div>
       <h1>{`Education`}</h1>
-      <h3>
+      <p style={{ marginTop: "70px" }}>
         Bacherlor of Science: <br />
         International Media and Computing
-      </h3>
-      <h5>
+      </p>
+      <h4 style={{ marginTop: "10px" }}>
         Oct 2016-Apr 2020 | University of Applied Sciences | Berlin, Germany 
-      </h5>
+      </h4>
 
-      <h3>
+      <p style={{ marginTop: "70px" }}>
         Bachelor of Science: <br />
         Computer Technologies and System of Publication and Printing Production
-      </h3>
-      <h5>Sep 2005-dec 2010 | Ukrainian Academy of Printing | Lviv, Ukraine</h5>
+      </p>
+      <h4 style={{ marginTop: "10px" }}>
+        Sep 2005-dec 2010 | Ukrainian Academy of Printing | Lviv, Ukraine
+      </h4>
       <style jsx>{`
         /*  h1 {
           color: #005b18;

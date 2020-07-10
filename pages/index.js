@@ -4,11 +4,9 @@ export default function Home() {
   console.log("Index");
 
   return (
-    /*  <Layout> */
     <div>
       <h1 className="title">Hi there, I am Yuliya!</h1>
-      <p>Click on cube sides to know me better :)</p>
+      <p className="clickOnCube">Click on cube sides to know me better :)</p>
     </div>
-    /* </Layout> */
   );
 }

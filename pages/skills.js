@@ -3,21 +3,21 @@ const skills = (props) => (
   <div>
     <h1> {`Skills`}</h1>
 
-    <h3>Technical skiils</h3>
-    <h5>
+    <h4>Technical skiils</h4>
+    <p>
       HTML, CSS, JS, React.js, Node.js, Next.js, React-Native, MS Office, MySQL,
       MongoDB
-    </h5>
+    </p>
 
-    <h3>Personal skiils</h3>
-    <h5>
-      good communication skills developed through work experience, work well as
+    <h4>Personal skiils</h4>
+    <p>
+      Good communication skills developed through work experience, work well as
       a member of a team in isolation, open to different ideas, working
       practices, and cultures
-    </h5>
+    </p>
 
-    <h3>Language skiils</h3>
-    <h5>English, German, Ukrainian, Russian</h5>
+    <h4>Language skiils</h4>
+    <p>English, German, Ukrainian, Russian</p>
 
     <style jsx>{`
       /*    h1 {
