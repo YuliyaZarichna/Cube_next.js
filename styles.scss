@@ -15,6 +15,20 @@ body {
   margin-left: 40px;
   z-index: 1;
   position: relative;
+
+  .ContactButton {
+    border-color: #3bb8bd;
+    background-color: transparent;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: #3bb8bd;
+    font-size: 16px;
+    letter-spacing: 4px;
+    height: 40px;
+
+    margin: 50px auto;
+    display: block;
+  }
 }
 
 .leftContent::before {
