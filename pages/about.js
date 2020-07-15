@@ -10,32 +10,38 @@ const about = (props) => {
   return (
     <div>
       <h1>{`About me`}</h1>
-      <p>
-        Recent graduate with a bachelor's degree in International Media and
-        Computing, from HTW Berlin. Passionate about building web prototypes and
-        applications, interested in frontend spectrum.
-      </p>
-      <p>
-        Open-minded, enthusiastic, hardworking and flexible. Motivated
-        team-worker, eager to learn new skills.
-      </p>
-
-      <div className="socialMedia">
-        <p>Find me in:</p>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/yuliya-zarichna/">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/">Github</a>
-          </li>
-        </ul>
-      </div>
+      {!showForm ? (
+        <div>
+          <p>
+            Recent graduate with a bachelor's degree in International Media and
+            Computing, from HTW Berlin. Passionate about building web prototypes
+            and applications, interested in frontend spectrum.
+          </p>
+          <p>
+            Open-minded, enthusiastic, hardworking and flexible. Motivated
+            team-worker, eager to learn new skills.
+          </p>
+          <div className="socialMedia">
+            <p className="findMe">Find me in:</p>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/in/yuliya-zarichna/">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/">Github</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <Form />
+      )}
       <button className="ContactButton" onClick={toggleForm}>
         CONTACT ME
       </button>
-      {showForm && <Form />}
-
+      {/* {showForm && <Form />} */}
       <style jsx>{`
         /*  h1 {
           color: #3bb8bd;

@@ -21,10 +21,11 @@ const contactForm = () => {
     return errorMessage;
   };
 
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = (values, { setSubmitting, resetForm }) => {
     console.log("sudmitted");
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
+      resetForm({});
       setSubmitting(false);
     }, 400);
   };

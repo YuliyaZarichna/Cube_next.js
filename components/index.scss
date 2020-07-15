@@ -1,14 +1,17 @@
 // pages/index.scss
-
+/* 
 * {
   box-sizing: border-box;
 }
-
+html {
+  font-size: calc(1em + 1vw);
+}
 html,
 body,
 #__next {
   height: 100%;
   width: 100%;
+  background: #1d1d1d;
 }
 
 body {
@@ -29,4 +32,4 @@ code {
 #root {
   display: flex;
   flex-direction: column;
-}
+} */

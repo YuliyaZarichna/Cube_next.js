@@ -1,19 +1,21 @@
+@import "../../query.scss";
 .MainFormDiv {
   display: flex;
   flex-direction: column;
-  // width: 100%;
   .ContactForm {
     width: 360px;
     display: flex;
     flex-direction: column;
     align-self: center;
-    //justify-content: center;
+
+    @include md {
+      width: 300px;
+    }
     .ContactRow {
       height: 80px;
 
       .ContactField {
         height: 30px;
-        // margin-bottom: 20px;
         width: 100%;
         background-color: transparent;
         border: 0;
@@ -22,6 +24,7 @@
       }
       .ErrorMessage {
         color: lightcoral;
+        font-size: 12px;
       }
       .TextArea {
         resize: none;
