@@ -2,6 +2,10 @@ import Layout from "../components/Layout/Layout";
 const hobby = (props) => (
   <div>
     <h1> {`Hobby`}</h1>
+    <p style={{ marginTop: "70px" }}>Reading</p>
+    <p style={{ marginTop: "70px" }}>Travelling</p>
+    <p style={{ marginTop: "70px" }}>Ukulele</p>
+    <p style={{ marginTop: "70px", color: "red" }}>VALORANT :)</p>
     <style jsx>{`
       /*   h1 {
         color: #fff200;

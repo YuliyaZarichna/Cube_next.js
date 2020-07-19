@@ -11,6 +11,9 @@
     @include md {
       width: 300px;
     }
+    @include sm {
+      width: 250px;
+    }
     .ContactRow {
       height: 80px;
 
