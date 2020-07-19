@@ -34,13 +34,13 @@ const about = (props) => {
               </li>
             </ul>
           </div>
+          <button className="ContactButton" onClick={toggleForm}>
+            CONTACT ME
+          </button>
         </div>
       ) : (
         <Form />
       )}
-      <button className="ContactButton" onClick={toggleForm}>
-        CONTACT ME
-      </button>
       {/* {showForm && <Form />} */}
       <style jsx>{`
         /*  h1 {
