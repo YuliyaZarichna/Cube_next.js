@@ -4,22 +4,32 @@ import "../components/index.scss";
 import "../components/Header/Header.scss";
 import Layout from "../components/Layout/Layout";
 import dynamic from "next/dynamic";
-import img from "../assets/images/wall.jpg";
+import useWindowSize from "../components/useWindowSize";
+import { useRouter } from "next/router";
 
 const DynamicComponent = dynamic(() => import("../components/cube.jsx"), {
   ssr: false,
 });
 
 export default function MyApp({ Component, pageProps }) {
-  console.log(img);
+  const { width } = useWindowSize();
+  const router = useRouter();
+  console.log("width", width);
+  const breakpoint = 768;
+
   return (
     <Layout>
       <div className="leftContent">
+        {/*    {router.pathname !== "/" && (
+          <div onClick={() => router.back()}>Go back!</div>
+        )} */}
         <Component {...pageProps} />
       </div>
-      <div className="rightContent">
-        <DynamicComponent />
-      </div>
+      {router.pathname === "/" || breakpoint < width ? (
+        <div className="rightContent">
+          <DynamicComponent />
+        </div>
+      ) : null}
       <style jsx global>{`
         .leftContent::before {
           filter: hue-rotate(90deg) brightness(20%) grayscale(20%);

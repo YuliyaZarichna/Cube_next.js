@@ -1,8 +1,4 @@
-import Layout from "../components/Layout/Layout";
-
 export default function Home() {
-  console.log("Index");
-
   return (
     <div>
       <h1 className="title" style={{ textTransform: "none" }}>

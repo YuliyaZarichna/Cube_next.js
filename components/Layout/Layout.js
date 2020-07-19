@@ -1,14 +1,29 @@
 import Head from "next/head";
 import Header from "../Header/Header";
+import useWindowSize from "../../components/useWindowSize";
+import { useRouter } from "next/router";
 
 const Layout = (props) => {
+  const router = useRouter();
+
+  const { width } = useWindowSize();
+  const breakpoint = 768;
+
   const appTitle = "YZ";
+  const appTitleSmall = "Back";
+
   return (
     <div className="Layout">
       <Head>
         <title>YZ</title>
       </Head>
-      <Header appTitle={appTitle} />
+      <Header
+        appTitle={
+          breakpoint < width || router.pathname === "/"
+            ? appTitle
+            : appTitleSmall
+        }
+      />
 
       <div className="Content">{props.children}</div>
     </div>

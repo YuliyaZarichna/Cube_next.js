@@ -49,6 +49,7 @@ class Cube extends Component {
 
     this.controls = new OrbitControls(this.camera, this.el);
     this.controls.enableZoom = false;
+    this.controls.enablePan = false;
     this.marginTop = this.el.getBoundingClientRect().top;
     this.marginLeft = this.el.getBoundingClientRect().left;
 
@@ -213,6 +214,7 @@ class Cube extends Component {
       event.changedTouches[0].clientY >= this.marginTop &&
       event.changedTouches[0].clientY <= height + this.marginTop
     ) {
+      console.log("onTouchEndHanler if");
       this.mouse.x =
         ((event.changedTouches[0].clientX - this.marginLeft) / width) * 2 - 1;
       this.mouse.y =
@@ -222,6 +224,7 @@ class Cube extends Component {
         this.onClick();
       }
     } else {
+      console.log("onTouchEndHanler else");
       this.mouse.x = 1;
       this.mouse.y = 1;
     }
