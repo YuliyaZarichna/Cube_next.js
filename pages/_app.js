@@ -26,9 +26,11 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       {router.pathname === "/" || breakpoint < width ? (
-        <div className="rightContent">
-          <DynamicComponent />
-        </div>
+        <>
+          <div className="rightContent">
+            <DynamicComponent />
+          </div>
+        </>
       ) : null}
       <style jsx global>{`
         .leftContent::before {

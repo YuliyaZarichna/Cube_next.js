@@ -10,7 +10,7 @@ const Layout = (props) => {
   const breakpoint = 768;
 
   const appTitle = "YZ";
-  const appTitleSmall = "Back";
+  const appTitleMobile = "Back";
 
   return (
     <div className="Layout">
@@ -21,7 +21,7 @@ const Layout = (props) => {
         appTitle={
           breakpoint < width || router.pathname === "/"
             ? appTitle
-            : appTitleSmall
+            : appTitleMobile
         }
       />
 
