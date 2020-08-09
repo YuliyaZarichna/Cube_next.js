@@ -7,12 +7,27 @@ const experience = (props) => (
       Scansonic MI GmbH
     </p>
     <h4 style={{ marginTop: "10px" }}>Dec 2018-Present | Berlin, Germany </h4>
+    <ul style={{ fontSize: "0.5em" }}>
+      <li>Monitoring web application</li>
+      <li>Correcting front-end-related issues</li>
+    </ul>
 
-    <p style={{ marginTop: "70px" }}>
+    <p style={{ marginTop: "80px" }}>
       Student Internship: Full-Stack Web Development <br />
       IAV Automotive Engineering, Inc
     </p>
     <h4 style={{ marginTop: "10px" }}>Apr 2018-Aug 2010 | Berlin, Germany</h4>
+    <ul style={{ fontSize: "0.5em" }}>
+      <li>
+        Designed and developed an internal web application to keep tracking the
+        testing process
+      </li>
+      <li>Built prototype for the website using Axure RP</li>
+      <li>Developed the front-end functionality with React.js</li>
+      <li>
+        Wrote custom REST APIs build in Node.js, used MongoDB as a data storage 
+      </li>
+    </ul>
 
     <style jsx>{`
       /*  h1 {

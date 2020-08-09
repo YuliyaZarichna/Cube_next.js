@@ -7,12 +7,12 @@ import { withRouter } from "next/router";
 
 extend({ OrbitControls });
 
-import AboutImg from "../assets/images/about2.png";
-import Education from "../assets/images/education.png";
-import Skills from "../assets/images/skills.png";
-import Project from "../assets/images/projects.png";
-import Experience from "../assets/images/experience.png";
-import Hobbies from "../assets/images/hobbies.png";
+import AboutImg from "../assets/images/a1.jpg";
+import Education from "../assets/images/e3.jpg";
+import Skills from "../assets/images/s1.jpg";
+import Project from "../assets/images/p1.jpg";
+import Experience from "../assets/images/exp1.jpg";
+import Hobbies from "../assets/images/h1.jpg";
 
 class Cube extends Component {
   constructor(props) {
@@ -39,7 +39,8 @@ class Cube extends Component {
     const height = this.el.clientHeight;
 
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color("#1d1d1d");
+    // this.scene.background = new THREE.Color("#1d1d1d");
+    this.scene.background = new THREE.Color("#e5e3e2");
 
     this.raycaster = new THREE.Raycaster();
     this.mouse = new THREE.Vector2();

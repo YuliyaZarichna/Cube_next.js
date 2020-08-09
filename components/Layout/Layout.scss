@@ -1,5 +1,6 @@
 @import "../../theme/theme";
 @import "../../query.scss";
+@import "./query.scss";
 
 .Layout {
   display: flex;
@@ -7,7 +8,8 @@
 
   height: 100%;
   width: 100%;
-  background: #1d1d1d;
+  // background: #1d1d1d;
+  background-color: #e5e3e2;
 
   .Content {
     display: flex;
@@ -31,13 +33,23 @@
 
     h1 {
       display: flex;
-      //font-size: 60px;
       font-size: 2em;
       font-family: $header-font;
       justify-content: center;
-      padding-top: 30px;
-      color: darkgray;
+      padding-top: 10px;
+      //olor: black;
       text-transform: uppercase;
+      color: mix(#e5e3e2, black, 85%);
+      font-size: calc(1em + 2vw);
+      font-weight: 900;
+      text-shadow: -0.0075em 0.0075em 0 mix(#e5e3e2, black, 94%),
+        0.005em 0.005em 0 mix(#e5e3e2, black, 60%),
+        0.01em 0.01em 0 mix(#e5e3e2, black, 62%),
+        0.015em 0.015em mix(#e5e3e2, black, 64%),
+        0.02em 0.02em 0 mix(#e5e3e2, black, 66%),
+        0.025em 0.025em 0 mix(#e5e3e2, black, 68%),
+        0.03em 0.03em 0 mix(#e5e3e2, black, 70%),
+        0.035em 0.035em 0 mix(#e5e3e2, black, 72%);
     }
 
     p,
@@ -62,13 +74,13 @@
       font-family: $header-font;
       font-size: 0.4em;
       text-transform: uppercase;
+      color: darkgray;
     }
 
     p {
-      //font-size: 20px;
       font-size: 0.6em;
       font-family: $text-font;
-      color: grey;
+      color: black;
     }
 
     .socialMedia {
@@ -89,13 +101,118 @@
       ul li {
         display: flex;
         list-style: none;
-        // align-items: center;
-        // justify-content: center;
         a {
           margin-right: 20px;
           text-decoration: none;
           color: lightgray;
           font-size: 0.6em;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+      line-height: 1.6em;
+      color: lightgray;
+    }
+
+    .timeline {
+      width: 100%;
+      max-width: 800px;
+      padding: 30px 50px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: calc(33% + 15px);
+        bottom: 0px;
+        width: 1px;
+        background: grey;
+      }
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+    .entry {
+      clear: both;
+      text-align: left;
+      position: relative;
+      .left {
+        // margin-bottom: 0.5em;
+        float: left;
+        width: 33%;
+        padding-right: 30px;
+        text-align: right;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border: 6px solid lightgrey;
+          background-color: #1d1d1d;
+          border-radius: 100%;
+          top: 5%;
+          right: -8px;
+          z-index: 99;
+        }
+        h3 {
+          margin: 0;
+          font-size: 120%;
+        }
+        p {
+          margin: 0;
+          font-size: 0.45em;
+          text-align: right;
+          font-weight: bold;
+        }
+      }
+    }
+    .right {
+      margin: 0 0 3em;
+      float: left;
+      width: 66%;
+      padding-left: 30px;
+      p {
+        //line-height: 1.4em;
+        font-size: 0.5em;
+        text-align: left;
+        &:first-child {
+          margin-top: 0;
+          font-weight: 400;
+        }
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      .rightDescription {
+        font-size: 0.42em;
+      }
+      ul {
+        color: #aaa;
+        padding-left: 0;
+        list-style-type: none;
+        li:before {
+          content: "–";
+          margin-right: 0.5em;
+        }
+      }
+
+      .flags {
+        display: flex;
+        width: 66%;
+        justify-content: space-around;
+        margin-left: 30px;
+        opacity: 0.7;
+        .flag {
+          width: 30px;
         }
       }
     }
