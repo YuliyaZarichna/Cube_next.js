@@ -113,7 +113,7 @@
     ul {
       list-style: none;
       text-align: center;
-      padding-left: 0;
+      //padding-left: 0;
       line-height: 1.6em;
       color: lightgray;
     }
@@ -136,6 +136,14 @@
         content: "";
         display: table;
         clear: both;
+      }
+
+      @include md {
+        padding: 30px 30px;
+      }
+
+      @include sm {
+        padding: 30px 30px;
       }
     }
     .entry {
@@ -160,6 +168,15 @@
           top: 5%;
           right: -8px;
           z-index: 99;
+          @include md {
+            right: -14px;
+            top: -3px;
+          }
+
+          @include sm {
+            right: -14px;
+            top: -3px;
+          }
         }
         h3 {
           margin: 0;
@@ -196,12 +213,26 @@
         font-size: 0.42em;
       }
       ul {
-        color: #aaa;
-        padding-left: 0;
-        list-style-type: none;
-        li:before {
-          content: "–";
+        color: black;
+        text-align: left;
+        //adding-left: 0;
+        margin-left: 20px;
+        //list-style-type: none;
+        font-size: 0.5em;
+        li {
+          list-style: upper-roman;
+        }
+        /* li:before {
+          content: "";
           margin-right: 0.5em;
+        } */
+        @include md {
+          margin-left: 0;
+        }
+
+        @include sm {
+          margin-left: 0;
+          padding-left: 20px;
         }
       }
 
@@ -215,6 +246,9 @@
           width: 30px;
         }
       }
+    }
+    .entry:last-child .right {
+      margin-bottom: 0;
     }
   }
 }

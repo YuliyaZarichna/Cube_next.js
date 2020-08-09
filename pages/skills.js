@@ -16,16 +16,6 @@ const skills = (props) => (
             HTML, CSS, JS, React.js, Node.js, Next.js, React-Native, MS Office,
             MySQL, MongoDB
           </p>
-          {/*      <ul>
-            <li>Rerum sit libero possimus amet excepturi</li>
-            <li>
-              Exercitationem enim dolores sunt praesentium dolorum praesentium
-            </li>
-            <li>
-              Modi aut dolores dignissimos sequi sit ut aliquid molestias
-              deserunt illo
-            </li>
-          </ul> */}
         </div>
       </div>
       <div className="entry">

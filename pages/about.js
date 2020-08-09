@@ -47,7 +47,7 @@ const about = (props) => {
           color: #3bb8bd;
           text-shadow: 2px 0px 15px rgba(59, 184, 189, 0.65);
         } */
-        div:first-child::before {
+        /* div:first-child::before {
           margin-top: -40px;
           height: 100%;
           width: 100%;
@@ -57,7 +57,7 @@ const about = (props) => {
           -webkit-box-shadow: 0px 0px 15px 4px rgba(59, 184, 189, 0.45);
           -moz-box-shadow: 0px 0px 15px 4px rgba(59, 184, 189, 0.45);
           box-shadow: 0px 0px 15px 4px rgba(59, 184, 189, 0.45);
-        }
+        } */
       `}</style>
     </div>
   );
