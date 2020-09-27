@@ -14,10 +14,11 @@
   font-family: $logo-font;
   font-size: 24px;
   font-weight: bold;
-  color: $on-secondary;
+  //color: $on-secondary;
+  color: #fbbd0d;
   text-transform: uppercase;
 
-  color: $highlight;
+  //color: $highlight;
   cursor: pointer;
   @include sm {
     height: 32px;

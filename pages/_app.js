@@ -1,4 +1,5 @@
 import "../styles.scss";
+import "../components/cube.scss";
 import "../components/Layout/Layout.scss";
 import "../components/index.scss";
 import "../components/Header/Header.scss";
@@ -6,6 +7,7 @@ import Layout from "../components/Layout/Layout";
 import dynamic from "next/dynamic";
 import useWindowSize from "../components/useWindowSize";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const DynamicComponent = dynamic(() => import("../components/cube.jsx"), {
   ssr: false,
@@ -19,12 +21,14 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
-      <div className="leftContent">
+      <motion.div className="leftContent">
         {/*    {router.pathname !== "/" && (
           <div onClick={() => router.back()}>Go back!</div>
         )} */}
-        <Component {...pageProps} />
-      </div>
+        <motion.div animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
+          <Component {...pageProps} />
+        </motion.div>
+      </motion.div>
       {router.pathname === "/" || breakpoint < width ? (
         <>
           <div className="rightContent">

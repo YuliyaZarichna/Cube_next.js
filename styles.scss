@@ -10,8 +10,8 @@ body,
 #__next {
   height: 100%;
   width: 100%;
-  //background: #1d1d1d;
-  background: #e5e3e2;
+  background: #1d1d1d;
+  //background: #e5e3e2;
 }
 body {
   scrollbar-width: none; /* Firefox 64 */
@@ -78,15 +78,20 @@ code {
 .leftContent::before {
   content: "";
   position: absolute;
-  background-image: url("./assets/images/concrete2.jpg");
+  //background-image: url("./assets/images/concrete2.jpg");
+  background-image: url("./assets/images/black.jpg");
+  //background-image: url("./assets/images/paper.jpg");
+
   // filter: hue-rotate(90deg) brightness(20%) grayscale(20%);
-  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
-    -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+  // box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+  //  -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+  // box-shadow: inset 1px 4px 38px -12px rgba(255, 255, 255, 0.72);
+  //box-shadow: 1px 4px 38px -12px rgba(255, 255, 255, 0.72);
   background-size: cover;
   opacity: 0.2;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 98%;
   @include md {
     width: 100%;
     position: absolute;

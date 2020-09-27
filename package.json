@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -14,12 +15,14 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "country-flag-icons": "^1.2.3",
     "formik": "^2.1.4",
+    "framer-motion": "^2.7.5",
     "next": "9.4.4",
     "next-images": "^1.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-three-fiber": "^4.2.12",
     "sass": "^1.26.9",
+    "styled-components": "^5.2.0",
     "three": "^0.117.1"
   }
 }

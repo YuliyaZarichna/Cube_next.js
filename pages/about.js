@@ -13,9 +13,10 @@ const about = (props) => {
       {!showForm ? (
         <div>
           <p>
-            Recent graduate with a bachelor's degree in International Media and
-            Computing, from HTW Berlin. Passionate about building web prototypes
-            and applications, interested in frontend spectrum.
+            I am a web technology enthusiast, recently graduated from the
+            university. I am interested in building websites and learning new
+            technologies. I am looking for new opportunities to grow in the
+            world of coding and design.
           </p>
           <p>
             Open-minded, enthusiastic, hardworking and flexible. Motivated

@@ -4,7 +4,9 @@ export default function Home() {
       <h1 className="title" style={{ textTransform: "none" }}>
         Hi there, I am Yuliya!
       </h1>
-      <p className="clickOnCube">Click on cube sides to know me better :)</p>
+      <p className="clickOnCube">
+        Rotate and click on cube sides to know me better :)
+      </p>
     </div>
   );
 }

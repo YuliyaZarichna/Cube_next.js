@@ -9,7 +9,7 @@ const Layout = (props) => {
   const { width } = useWindowSize();
   const breakpoint = 768;
 
-  const appTitle = "YZ";
+  const appTitle = "Home";
   const appTitleMobile = "Back";
 
   return (

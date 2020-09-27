@@ -2,6 +2,7 @@ import Layout from "../components/Layout/Layout";
 const project = (props) => (
   <div className="container">
     <h1>{`Projects`}</h1>
+    <p style={{ marginTop: "70px" }}>Constructing</p>
 
     <style jsx>{`
       /*   h1 {

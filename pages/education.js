@@ -60,7 +60,7 @@ const education = (props) => {
               Publication and Printing Production, Ukraine
             </p>
             <p>
-              <span>Focus: </span>Prepress, Layout and editing, Color
+              <span>Focus:</span> Prepress, Layout and editing, Color
               reproduction
             </p>
           </div>
