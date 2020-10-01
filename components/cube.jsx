@@ -108,7 +108,7 @@ class Cube extends Component {
     this.lines.material.transparent = true;
 
     this.scene.add(this.cube);
-    this.scene.add(this.lines);
+    //this.scene.add(this.lines);
 
     const lights = [];
     lights[0] = new THREE.PointLight(0xffffff, 1, 0);
