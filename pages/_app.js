@@ -7,7 +7,7 @@ import Layout from "../components/Layout/Layout";
 import dynamic from "next/dynamic";
 import useWindowSize from "../components/useWindowSize";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const DynamicComponent = dynamic(() => import("../components/cube.jsx"), {
   ssr: false,
@@ -21,14 +21,13 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
-      <motion.div className="leftContent">
+      <div className="leftContent">
         {/*    {router.pathname !== "/" && (
           <div onClick={() => router.back()}>Go back!</div>
         )} */}
-        <motion.div animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-          <Component {...pageProps} />
-        </motion.div>
-      </motion.div>
+        <Component {...pageProps} />
+      </div>
+
       {router.pathname === "/" || breakpoint < width ? (
         <>
           <div className="rightContent">

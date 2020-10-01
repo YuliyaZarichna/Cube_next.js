@@ -54,7 +54,6 @@ class Cube extends Component {
     this.scene = new THREE.Scene();
     //this.scene.background = new THREE.Color("#2a2e34");
     this.scene.background = new THREE.Color("#1d1d1d");
-    //this.scene.background = new THREE.Color("#e5e3e2");
 
     this.raycaster = new THREE.Raycaster();
     this.mouse = new THREE.Vector2();
@@ -63,8 +62,7 @@ class Cube extends Component {
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 
     this.controls = new OrbitControls(this.camera, this.el);
-    console.log(this.controls);
-    this.controls.enableZoom = false;
+    this.controls.enableZoom = true;
     this.controls.enablePan = false;
 
     this.controls.autoRotate = true;
@@ -84,21 +82,9 @@ class Cube extends Component {
     var color = new THREE.Color("rgba(0,127,127)");
 
     const geometry = new THREE.BoxGeometry(4, 4, 4);
-    /*      const material = new THREE.MeshPhongMaterial({
-                 color: color,
-                 side: THREE.DoubleSide,
-                 transparent: true,
-                 //opacity: 0.9,
-             }); */
+    let loadManager = new THREE.LoadingManager();
+    let loader = new THREE.TextureLoader(loadManager);
 
-    console.log("about contact", AboutImg);
-    console.log("skills", Skills);
-    console.log("projects", Project);
-    console.log("experience, work", Experience);
-    console.log("education", Education);
-    console.log("fun", Hobbies);
-
-    let loader = new THREE.TextureLoader();
     let material = [
       new THREE.MeshBasicMaterial({ map: loader.load(AboutImg) }),
       new THREE.MeshBasicMaterial({ map: loader.load(Skills) }),
@@ -108,6 +94,7 @@ class Cube extends Component {
       new THREE.MeshBasicMaterial({ map: loader.load(Hobbies) }),
     ];
 
+    loadManager.load = () => {};
     this.cube = new THREE.Mesh(geometry, material);
     this.edges = new THREE.EdgesGeometry(geometry);
     this.lines = new THREE.LineSegments(
@@ -115,9 +102,13 @@ class Cube extends Component {
       //new THREE.LineBasicMaterial({ color: 0xfbbd0d })
       new THREE.LineBasicMaterial({ color: 0x1c1e1e })
     );
-    this.scene.add(this.lines);
+    this.lines.material.linewidth = 4;
+    this.lines.material.depthTest = false;
+    this.lines.material.opacity = 0.5;
+    this.lines.material.transparent = true;
 
     this.scene.add(this.cube);
+    this.scene.add(this.lines);
 
     const lights = [];
     lights[0] = new THREE.PointLight(0xffffff, 1, 0);

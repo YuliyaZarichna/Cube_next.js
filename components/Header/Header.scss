@@ -17,13 +17,21 @@
   //color: $on-secondary;
   color: #fbbd0d;
   text-transform: uppercase;
-
-  //color: $highlight;
+  position: fixed;
+  margin-top: -5px;
   cursor: pointer;
+
+  @include md {
+    margin-left: 20px;
+    z-index: 2;
+  }
+
   @include sm {
     height: 32px;
     font-size: 16px;
-    /*  margin-top: 10px;
-    margin-bottom: 10px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    z-index: 2;
   }
 }

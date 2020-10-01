@@ -47,6 +47,8 @@ code {
   margin-left: 40px;
   z-index: 1;
   position: relative;
+  margin-top: 50px;
+
   @include md {
     z-index: 1;
     width: 90%;

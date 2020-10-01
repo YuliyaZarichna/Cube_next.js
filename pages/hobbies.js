@@ -2,14 +2,14 @@ import Layout from "../components/Layout/Layout";
 const hobby = (props) => (
   <div>
     <h1> {`Hobby`}</h1>
-    <p style={{ marginTop: "70px" }}>Reading</p>
-    <p style={{ marginTop: "70px" }}>Exploring</p>
-    <p style={{ marginTop: "70px" }}>Ukulele</p>
-    <p style={{ marginTop: "70px" }}>Yoga</p>
-    <p style={{ marginTop: "70px" }}>Swimming</p>
-    <p style={{ marginTop: "70px" }}>Cycling</p>
+    <p style={{ marginTop: "40px" }}>Reading</p>
+    <p style={{ marginTop: "40px" }}>Exploring</p>
+    <p style={{ marginTop: "40px" }}>Ukulele</p>
+    <p style={{ marginTop: "40px" }}>Yoga</p>
+    <p style={{ marginTop: "40px" }}>Swimming</p>
+    <p style={{ marginTop: "40px" }}>Cycling</p>
 
-    <p style={{ marginTop: "70px", color: "red" }}>VALORANT :)</p>
+    <p style={{ marginTop: "40px", color: "red" }}>VALORANT :)</p>
     <style jsx>{`
       /*   h1 {
         color: #fff200;

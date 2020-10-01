@@ -1,6 +1,12 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import classes from "./Form.module.scss";
+import { useState, useEffect } from "react";
+
 const contactForm = () => {
+  const [response, setResponse] = useState({
+    type: "",
+    message: "",
+  });
   const validateEmail = (value) => {
     console.log("validate email", value);
     let errorMessage;
@@ -21,13 +27,54 @@ const contactForm = () => {
     return errorMessage;
   };
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    console.log(arguments);
+    values = {
+      ...values,
+      replyTo: `@${values.email}`,
+      honeypot: "",
+      accessKey: "7b46b0ab-c207-4700-90e6-2a9fb245f6d5",
+    };
+    values = { ...values, replyTo: `@${values.email}` };
     console.log("sudmitted");
-    setTimeout(() => {
+    /* setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       resetForm({});
       setSubmitting(false);
-    }, 400);
+    }, 400); */
+
+    try {
+      const res = await fetch("https://api.staticforms.xyz/submit", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setResponse({
+          type: "Success",
+          message: "Thank you for reaching out to me.",
+        });
+        resetForm({});
+        setSubmitting(false);
+      } else {
+        setResponse({
+          type: "Error",
+          message: json.message,
+        });
+        setSubmitting(false);
+      }
+    } catch (e) {
+      console.log("Ups:", e);
+      toggleOpen();
+
+      setResponse({
+        type: "error",
+        message:
+          "An error occured while submitting the form, please try again.",
+      });
+    }
   };
 
   return (
